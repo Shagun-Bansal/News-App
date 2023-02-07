@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.2.2"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10'
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.42"
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.1'
+    }
+    ext.kotlin_version = '1.8.0'
+}
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    paging_version = "3.1.1"
+    coroutines = '1.5.0'
+    lifecycleVersion = '2.5.1'
+    roomVersion = '2.4.3'
+    BASE_URL = "https://newsapi.org/v2/"
+    API_KEY = "8fd3bca8c9ae451581b5290e53d3dd65"
+    CLIENT_ID = "b44b242af5a2c34"
+}
